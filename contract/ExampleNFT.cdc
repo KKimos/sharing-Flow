@@ -48,10 +48,6 @@ pub contract ExampleNFT :NonFungibleToken,NonFungibleTokenUser{
         }
     }
 
-    pub resource interface Create{
-        pub fun createUserNFT(NFTID: UInt64 , expTime: UInt64): @NonFungibleTokenUser.UserNFT
-    }
-
     // The definition of the Collection resource that
     // holds the NFTs that a user owns
     pub resource Collection: NonFungibleToken.Provider,NonFungibleToken.Receiver,NonFungibleToken.CollectionPublic,NonFungibleTokenUser.NFTUserProvider,NonFungibleTokenUser.NFTUserReceiver,NonFungibleTokenUser.UserCollectionPublic,Create{
