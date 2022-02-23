@@ -55,6 +55,9 @@ pub contract interface NonFungibleTokenUser{
         }
     }
     
+    pub resource interface Create{
+        pub fun createUserNFT(NFTID: UInt64 , expTime: UInt64): @NonFungibleTokenUser.UserNFT
+    }
 
     // Interface that an account would commonly 
     // publish for their collection
